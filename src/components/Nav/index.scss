@@ -1,0 +1,120 @@
+@import "../../style/var-globals.scss";
+$container: 100%;
+
+.menu {
+    background-color: $background-black-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-close {
+    width: $container - 95%;
+}
+
+.menu-open {
+    width: $container - 80%;
+}
+
+.lineas {
+    margin-top: 30px;
+    cursor: pointer;
+    border: solid 1px $background-color;
+    border-radius: 5px;
+    background-color: $background-color;
+    padding: 1.5vh;
+}
+
+.linea-dos {
+    height: 0.5px;
+    width: $width-linea - 565px;
+    background-color: $color-font-b;
+}
+
+.abajo-una {
+    margin-top: 8px;
+}
+
+.abajo-dos {
+    margin-top: 9px;
+}
+
+// iconos menu
+.icons-menu {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.icons {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icons-close {
+    display: none;
+}
+
+.icons-open {
+    display: inline;
+}
+.icons-menu-2 {
+    color: $color-font-b;
+    transition-duration: 0.7s;
+}
+.icons-menu-2:hover {
+    color: $color-hover;
+    cursor: pointer;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+// Media Querys
+
+@media (max-width: 1281px) {
+    .menu {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding-bottom: 30px;
+        
+    }
+    .menu-close {
+        width: $container;
+        height: 40px;
+    }
+    .icons-close-mobile{
+        display: none;
+    }
+    .lineas {
+        margin-right: 30px;
+    }
+    .icons-menu {
+        height: 100px;
+    }
+    // Menu abierto
+    .icons-open-mobile {
+        display: inline;
+        height: 50px;
+    }
+    // .menu-open {
+    //     display: flex;
+    //     flex-direction: column;
+    //     width: $container;
+    //     height: 100px;
+    // }
+    .menu-open {
+        width: $container;
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

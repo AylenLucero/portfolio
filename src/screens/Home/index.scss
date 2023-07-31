@@ -1,0 +1,78 @@
+
+@import "../../style/var-globals.scss";
+$container: 100%;
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: $container;
+}
+.body-home {
+    width: $container;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.page {
+    width: 60%;
+}
+
+.txt-name-cv {
+    font-size: $font-size-title;
+    color: $color-font-b-hover;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    filter: drop-shadow(3px 3px 2px $color-hover);
+    transition-duration: 0.7s;
+    text-align: center;
+}
+
+
+.lineaCenter {
+    display: flex;
+    justify-content: center;
+}
+.linea {
+    height: 1px;
+    width: $width-linea;
+    background-color: $color-font-b;
+}
+
+.txt-cv {
+    color: $color-font-b;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: 0.9rem;
+}
+
+.img-cv {
+    width: 45vh;
+    border-radius: 20px;
+    filter: drop-shadow(1px 1px 2px $background-white);
+}
+
+.txt {
+    display: flex;
+    justify-content: center;
+}
+.txt p {
+    color: $color-font-b;
+    width: 80%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.txt p:hover {
+    color: $color-font-b-hover;
+}
+
+
+// Media Querys
+@media (max-width: 1281px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
