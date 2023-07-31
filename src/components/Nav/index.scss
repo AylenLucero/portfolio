@@ -6,7 +6,11 @@ $container: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: $container;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    position: fixed;
 }
 
 .menu-close {
@@ -14,7 +18,7 @@ $container: 100%;
 }
 
 .menu-open {
-    width: $container - 80%;
+    width: $container - 85%;
 }
 
 .lineas {
@@ -43,7 +47,7 @@ $container: 100%;
 // iconos menu
 .icons-menu {
     width: 100%;
-    height: 80vh;
+    height: 80%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -79,42 +83,13 @@ $container: 100%;
 // Media Querys
 
 @media (max-width: 1281px) {
-    .menu {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        padding-bottom: 30px;
-        
-    }
     .menu-close {
-        width: $container;
-        height: 40px;
+        width: 15%;
     }
-    .icons-close-mobile{
-        display: none;
-    }
-    .lineas {
-        margin-right: 30px;
+    .menu-open {
+        width: 45%;
     }
     .icons-menu {
-        height: 100px;
-    }
-    // Menu abierto
-    .icons-open-mobile {
-        display: inline;
-        height: 50px;
-    }
-    // .menu-open {
-    //     display: flex;
-    //     flex-direction: column;
-    //     width: $container;
-    //     height: 100px;
-    // }
-    .menu-open {
-        width: $container;
-        height: 110px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        height: 85%;
     }
 }
