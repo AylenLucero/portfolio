@@ -1,5 +1,5 @@
 import React from "react";
-import { H1, H2, Linea, Nav } from "../../components/index.jsx";
+import { H1, H2, Linea, Nav, ADownload, A } from "../../components/index.jsx";
 import "./index.scss";
 import foto from "../../assets/img/foto-cv.jpg";
 
@@ -21,7 +21,15 @@ const Home = () => {
                             <p>
                             Soy una persona muy curiosa, amable, tengo paciencia y pienso que es muy positivo seguir aprendiendo día a día un poco más. Poseo buena capacidad de organización, soy sociable, responsable y trabajo bien en equipo. Deseo seguir perfeccionándome a futuro y demostrando mis capacidades.
                             </p>
-                        </div>                    
+                        </div>     
+                        <div className="container-btns">
+                            <div className="containter-btn">
+                                <ADownload clas="btn-download-cv" txt="Descargar CV"/>
+                            </div>  
+                            <div className="containter-btn">
+                                <A clas="btn-tech" txt="Tecnologias" link="#"/>
+                            </div> 
+                        </div>                        
                     </div>
                     <div className="container-img">
                         <img src={foto} alt="foto cv" className="img-cv"/>  

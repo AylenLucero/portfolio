@@ -1,0 +1,11 @@
+
+@import "../../style/var-globals.scss";
+
+a {
+    color: $color-font-b;
+    text-decoration: none;
+}
+.icon-btn {
+    padding-left: 5px;
+    color: $color-hover;
+}

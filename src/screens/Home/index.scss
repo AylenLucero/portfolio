@@ -23,7 +23,8 @@ $container: 100%;
     justify-content: center;
 }
 .page {
-    width: 60%;
+    width: 50%;
+    margin-left: 25px;
 }
 
 .txt-name-cv {
@@ -51,18 +52,11 @@ $container: 100%;
     color: $color-font-b;
     font-weight: 400;
     text-align: center;
-    margin-top: 50px;
+    // margin-top: 50px;
     letter-spacing: 0.9rem;
 }
-.container-img {
-    width: 25%;
-}
-.img-cv {
-    width: 100%;
-    border-radius: 20px;
-    filter: drop-shadow(1px 1px 2px $background-white);
-}
 
+// TXT descripcion
 .txt {
     display: flex;
     justify-content: center;
@@ -77,6 +71,36 @@ $container: 100%;
     color: $color-font-b-hover;
 }
 
+// ESTILO BTN DESCARGA CV
+.container-btns {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.containter-btn {
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px $color-hover solid;
+    transition-duration: 1.5s;
+}
+.containter-btn:hover {
+    background-color: $background-color;
+}
+
+// IMG
+.container-img {
+    width: 25%;
+}
+.img-cv {
+    width: 100%;
+    border-radius: 20px;
+    filter: drop-shadow(1px 1px 2px $background-white);
+}
+
+
+
 
 // Media Querys
 @media (max-width: 1281px) {
@@ -86,5 +110,15 @@ $container: 100%;
         margin-top: 300px;
         width: 100%;
         padding-left: 15%;
+    }
+    .page {
+        width: 70%;
+    }
+    .txt p {
+        width: 100%;
+        font-weight: 1.2rem;
+    }
+    .container-btns {
+        margin-top: 30px;
     }
 }
