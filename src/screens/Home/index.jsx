@@ -1,12 +1,12 @@
 import React from "react";
-import { H1, H2, Linea, Nav, ADownload, A } from "../../components/index.jsx";
+import { H1, H2, Linea, Nav, ADownload, A, P } from "../../components/index.jsx";
 import "./index.scss";
 import foto from "../../assets/img/foto-cv.jpg";
 
 const Home = () => {
     
     return(
-        <div className="container">
+        <section className="container-home">
             <Nav />
             <div className="body-home">
                 <div className="container-body-home">
@@ -14,20 +14,15 @@ const Home = () => {
                         <H1 txt="AYLEN LUCERO" clas="txt-name-cv" /> 
                         <div className="lineaCenter">
                             <Linea clas="linea" />
-                        </div>
-                        
+                        </div>                        
                         <H2 txt="FRONTEND DEVELOPER" clas="txt-cv" />
-                        <div className="txt">
-                            <p>
-                            Soy una persona muy curiosa, amable, tengo paciencia y pienso que es muy positivo seguir aprendiendo día a día un poco más. Poseo buena capacidad de organización, soy sociable, responsable y trabajo bien en equipo. Deseo seguir perfeccionándome a futuro y demostrando mis capacidades.
-                            </p>
-                        </div>     
+                        <P clas="txt" txt="Soy una persona muy curiosa, amable, tengo paciencia y pienso que es muy positivo seguir aprendiendo día a día un poco más. Poseo buena capacidad de organización, soy sociable, responsable y trabajo bien en equipo. Deseo seguir perfeccionándome a futuro y demostrando mis capacidades." />    
                         <div className="container-btns">
                             <div className="containter-btn">
                                 <ADownload clas="btn-download-cv" txt="Descargar CV"/>
                             </div>  
                             <div className="containter-btn">
-                                <A clas="btn-tech" txt="Tecnologias" link="#"/>
+                                <A clas="btn-tech" txt="Tecnologías" link="#technologiesSection" icon="none"/>
                             </div> 
                         </div>                        
                     </div>
@@ -36,7 +31,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>            
-        </div>
+        </section>
     )
 }
 

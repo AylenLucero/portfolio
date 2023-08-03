@@ -1,0 +1,56 @@
+@import "../../style/var-globals.scss";
+
+.container-technologies {
+    background-color: $color-font-b-hover;
+    padding-top: 5vh;
+    padding-bottom: 8vh;
+    color: $background-color;
+    display: flex;
+    justify-content: flex-end;
+    
+} 
+.container-tech {
+    width: 179vh;
+}
+
+// H2
+.title-tec {
+    font-size: 2rem;
+    text-align: center;
+    filter: drop-shadow(1px 2px 2px $background-black);
+}
+
+// LOGS
+.container-logs {
+    display: flex;
+    justify-content: center;
+}
+.container-logs2 {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    gap: 40px;    
+    justify-content: center;
+    
+}
+.container-logs2 img {
+    width: 100px;
+    height: 70px;
+    margin-left: 25px;
+}
+.container-logs2 p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.technology {
+    padding-bottom: 15px;
+    transition-duration: 1s;
+    border-radius: 20px;
+}
+.technology:hover {
+    filter: drop-shadow(5px 2px 2px $background-color);
+    background-color: $background-color;
+    color: $color-font-b-hover;    
+}

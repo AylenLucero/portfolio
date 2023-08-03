@@ -1,9 +1,36 @@
 import React, {useState} from "react";
 import {Linea} from "../Linea/index";
-import { NavLink } from "react-router-dom";
 import "./index.scss";
 
 const Nav = () => {
+
+    const arrayMenu = [
+        {
+            "hrefLink":"google.com",
+            "iconTip":"fa-sharp fa-solid fa-house fa-lg",
+            "name":"Principal"
+        },
+        {
+            "hrefLink":"google.com", 
+            "iconTip":"fa fa-laptop",
+            "name":"Tecnologías"
+        },
+        {
+            "hrefLink":"google.com",
+            "iconTip":"fa-solid fa-code fa-lg",
+            "name":"Proyectos"
+        },
+        {
+            "hrefLink":"google.com",
+            "iconTip":"fa-sharp fa-solid fa-lg fa-graduation-cap",
+            "name":"Educación"
+        },
+        {
+            "hrefLink":"google.com",
+            "iconTip":"fa-sharp fa-solid fa-briefcase fa-lg",
+            "name":"Laboral"
+        }
+    ]
 
     let [classMenu, setClassMenu] = useState("menu menu-close");
     let [icons, setIcons] = useState("icons-close");
@@ -33,30 +60,18 @@ const Nav = () => {
                 </div>
                 <div className="icons-menu">
                     <div className={iconsMobile}>
-                        <NavLink to="/" className="nav-link">
-                            <div className="icons-menu-2">
-                                <i class="fa-sharp fa-solid fa-house fa-lg"></i>
-                                <p className={icons}> Principal </p>
-                            </div>  
-                        </NavLink>
-                        <NavLink to="/academy" className="nav-link">
-                            <div className="icons-menu-2">
-                                <i class="fa-sharp fa-solid fa-lg fa-graduation-cap"></i> 
-                                <p className={icons}> Educación </p>
-                            </div>  
-                        </NavLink>
-                        <NavLink to="/work" className="nav-link">
-                            <div className="icons-menu-2">
-                                <i class="fa-sharp fa-solid fa-briefcase fa-lg"></i>
-                                <p className={icons}> Laboral </p>
-                            </div>
-                        </NavLink>
-                        <NavLink to="/projects" className="nav-link">
-                            <div className="icons-menu-2">
-                                <i class="fa-solid fa-code fa-lg"></i>
-                                <p className={icons}> Proyectos </p>
-                            </div>
-                        </NavLink>
+                        {
+                            arrayMenu.map((elem) => {
+                                return(
+                                    <a href={elem.hrefLink} className="nav-link">
+                                        <div className="icons-menu-2">
+                                            <i class={elem.iconTip}></i>
+                                            <p className={icons}> {elem.name} </p>
+                                        </div>  
+                                    </a>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>

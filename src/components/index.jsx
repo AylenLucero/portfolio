@@ -4,3 +4,4 @@ export {H2} from "./H2";
 export {Linea} from "./Linea";
 export {ADownload} from "./ADownload";
 export {A} from "./A";
+export {P} from "./P";
